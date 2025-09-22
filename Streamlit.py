@@ -34,6 +34,9 @@ def set_background_image(image_path):
                 background-attachment: fixed;
                 color: #2C2C2C !important;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
             }}
             </style>
@@ -54,7 +57,7 @@ images = {
 st.markdown("""
 <div style="background-color: rgba(255,255,255,0.95); 
             padding: 20px; border-radius: 12px; margin-bottom: 20px; 
-            display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;">
     <h1 style="color:#2C2C2C; margin-bottom:8px;">Priyadharshini M</h1>
     <p style="color:#444; font-size:18px; font-weight:500;">
         Junior Software Developer | Python | MySQL | HTML | CSS | Excel
@@ -66,21 +69,39 @@ st.markdown("""
 nav = ["About", "Skills", "Projects", "Education", "Contact"]
 selected = st.radio("", nav, horizontal=True)
 
-# CSS to remove extra spacing and center radio buttons
+# CSS to remove extra spacing and center all content
 st.markdown("""
 <style>
-/* Remove default spacing around radio buttons */
-.stRadio, .css-18e3th9 {margin-bottom:0px !important; padding-bottom:0px !important;}
-/* Reduce top padding for main container */
-.css-1d391kg {padding-top: 0rem !important;}
-/* Center the radio buttons */
+/* Center main container and all content */
+.css-1d391kg {
+    padding-top: 0rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Center radio buttons */
 .stRadio > label {
     display: flex;
     justify-content: center;
 }
-/* Remove gap between nav and content */
+
+/* Remove extra gap between nav and content */
 div[role="radiogroup"] {
     margin-bottom: 0px !important;
+}
+
+/* Remove default spacing around radio buttons */
+.stRadio, .css-18e3th9 {
+    margin-bottom: 0px !important; 
+    padding-bottom: 0px !important;
+}
+
+/* Center markdown headers and paragraphs */
+h1, h2, h3, h4, h5, h6, p, .stMarkdown, .stText {
+    text-align: center;
+    color: #2C2C2C !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -90,16 +111,6 @@ st.markdown("---")
 # Set background image
 if selected in images:
     set_background_image(images[selected])
-
-# Centered text CSS
-st.markdown("""
-<style>
-h1, h2, h3, h4, h5, h6, p {
-    color: #2C2C2C !important;
-    text-align: center;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # Section content
 if selected == "About":
