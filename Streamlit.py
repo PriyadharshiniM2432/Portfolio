@@ -1,6 +1,5 @@
 import streamlit as st
 import base64
-import os
 
 # Page config
 st.set_page_config(
@@ -41,7 +40,7 @@ def set_background_image(image_path):
             unsafe_allow_html=True
         )
 
-# Images mapping
+# Map background images to sections
 images = {
     "About": "img/about.jpg",
     "Skills": "img/skills.jpg",
@@ -68,12 +67,12 @@ selected = st.radio("", nav, horizontal=True)
 
 st.markdown("---")
 
-# Set background based on section
+# Set background image if available
 if selected in images:
     set_background_image(images[selected])
 
 # Content container CSS
-content_style = """
+st.markdown("""
 <style>
 .content-container {
     background-color: rgba(255, 255, 255, 0.95);
@@ -87,17 +86,15 @@ h1, h2, h3, h4, h5, h6, p, li {
     color: #2C2C2C !important;
 }
 </style>
-"""
-st.markdown(content_style, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
-# Sections content
+# Section content
 if selected == "About":
     st.markdown('<div class="content-container">', unsafe_allow_html=True)
     st.header("About Me")
     st.write("""
        Hello! I'm **Priyadharshini M**, a recent Electronics and Communication Engineering graduate 
        from Karpagam College of Engineering, Coimbatore.  
-       
        I have hands-on experience in Python, MySQL, and web development.  
        I am passionate about continuous learning and building real-world applications.
     """)
