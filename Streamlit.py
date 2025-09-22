@@ -119,7 +119,7 @@ if selected == "About":
     st.markdown('</div>', unsafe_allow_html=True)
 
 elif selected == "Skills":
-    st.markdown('<div class="content-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="content-container">', unsafe_allow_html=True)
     st.header("Skills")
     st.write("""
     - **Programming:** Python  
@@ -130,7 +130,7 @@ elif selected == "Skills":
     st.markdown('</div>', unsafe_allow_html=True)
 
 elif selected == "Projects":
-    st.markdown('<div class="content-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="content-container">', unsafe_allow_html=True)
     st.header("Projects")
     st.write("""
     - **Smart Home Security System** – Designed a security system with sensors + GSM for real-time alerts.  
@@ -139,7 +139,7 @@ elif selected == "Projects":
     st.markdown('</div>', unsafe_allow_html=True)
 
 elif selected == "Education":
-    st.markdown('<div class="content-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="content-container">', unsafe_allow_html=True)
     st.header("Education")
     st.write("""
     - **B.E. in Electronics and Communication Engineering** (2025)  
@@ -154,10 +154,11 @@ elif selected == "Education":
     st.markdown('</div>', unsafe_allow_html=True)
 
 elif selected == "Contact":
-    st.markdown('<div class="content-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="content-container">', unsafe_allow_html=True)
     st.header("Contact")
     st.write("📧 **Email:** priyadharshinim2432@gmail.com")
     st.write("💻 **GitHub:** [github.com/PriyadharshiniM2432](https://github.com/PriyadharshiniM2432)")
     st.write("🔗 **LinkedIn:** [linkedin.com/in/priyadharshini2432](https://www.linkedin.com/in/priyadharshini2432)")
     st.write("📱 **Phone:** +91 9790189573")
     st.markdown('</div>', unsafe_allow_html=True)
+
