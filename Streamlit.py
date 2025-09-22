@@ -65,6 +65,24 @@ st.markdown("""
 nav = ["About", "Skills", "Projects", "Education", "Contact"]
 selected = st.radio("", nav, horizontal=True)
 
+# Remove extra spacing below radio buttons
+st.markdown(
+    """
+    <style>
+    /* Remove default padding/margin around radio buttons and main block */
+    .stRadio, .css-18e3th9 {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    /* Reduce top padding for main container */
+    .css-1d391kg {
+        padding-top: 0rem !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("---")
 
 # Set background image if available
