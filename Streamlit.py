@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 # Section content
 if selected == "About":
-    st.markdown('<div class="content-container">', unsafe_allow_html=True)
+    # st.markdown('<div class="content-container">', unsafe_allow_html=True)
     st.header("About Me")
     st.write("""
        Hello! I'm **Priyadharshini M**, a recent Electronics and Communication Engineering graduate 
@@ -161,4 +161,5 @@ elif selected == "Contact":
     st.write("🔗 **LinkedIn:** [linkedin.com/in/priyadharshini2432](https://www.linkedin.com/in/priyadharshini2432)")
     st.write("📱 **Phone:** +91 9790189573")
     st.markdown('</div>', unsafe_allow_html=True)
+
 
