@@ -83,10 +83,10 @@ st.markdown("---")
 if selected in images:
     set_background_image(images[selected])
 
-# Centered section content CSS
+# Centered text CSS
 st.markdown("""
 <style>
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p {
     color: #2C2C2C !important;
     text-align: center;
 }
@@ -97,44 +97,41 @@ h1, h2, h3, h4, h5, h6, p, li {
 if selected == "About":
     st.header("About Me")
     st.write("""
-       Hello! I'm **Priyadharshini M**, a recent Electronics and Communication Engineering graduate 
-       from Karpagam College of Engineering, Coimbatore.  
-       I have hands-on experience in Python, MySQL, and web development.  
-       I am passionate about continuous learning and building real-world applications.
+Hello! I'm **Priyadharshini M**, a recent Electronics and Communication Engineering graduate 
+from Karpagam College of Engineering, Coimbatore.  
+I have hands-on experience in Python, MySQL, and web development.  
+I am passionate about continuous learning and building real-world applications.
     """)
 
 elif selected == "Skills":
     st.header("Skills")
     st.write("""
-    - **Programming:** Python  
-    - **Database:** MySQL  
-    - **Web:** HTML, CSS  
-    - **Tools:** VS Code, GitHub, Microsoft Excel
+Programming: Python  
+Database: MySQL  
+Web: HTML, CSS  
+Tools: VS Code, GitHub, Microsoft Excel
     """)
 
 elif selected == "Projects":
     st.header("Projects")
     st.write("""
-    - **Smart Home Security System** – Designed a security system with sensors + GSM for real-time alerts.  
-    - **Portfolio Website** – Built a personal website using HTML and CSS to showcase my work.
+Smart Home Security System – Designed a security system with sensors + GSM for real-time alerts.  
+Portfolio Website – Built a personal website using HTML and CSS to showcase my work.
     """)
 
 elif selected == "Education":
     st.header("Education")
     st.write("""
-    - **B.E. in Electronics and Communication Engineering** (2025)  
-      Karpagam College of Engineering, Coimbatore — **7.95 CGPA**  
+B.E. in Electronics and Communication Engineering (2025) – Karpagam College of Engineering, Coimbatore — 7.95 CGPA  
 
-    - **Higher Secondary (HSC)** – 2021  
-      Kalaimagal Kalvi Nilayam Girls Hr Sec School, Erode — **88.28%**  
+Higher Secondary (HSC) – 2021 – Kalaimagal Kalvi Nilayam Girls Hr Sec School, Erode — 88.28%  
 
-    - **Secondary (SSLC)** – 2019  
-      Carmel Matric Hr Sec School, Erode — **86.6%**
+Secondary (SSLC) – 2019 – Carmel Matric Hr Sec School, Erode — 86.6%
     """)
 
 elif selected == "Contact":
     st.header("Contact")
-    st.write("📧 **Email:** priyadharshinim2432@gmail.com")
-    st.write("💻 **GitHub:** [github.com/PriyadharshiniM2432](https://github.com/PriyadharshiniM2432)")
-    st.write("🔗 **LinkedIn:** [linkedin.com/in/priyadharshini2432](https://www.linkedin.com/in/priyadharshini2432)")
-    st.write("📱 **Phone:** +91 9790189573")
+    st.write("Email: priyadharshinim2432@gmail.com")
+    st.write("GitHub: [github.com/PriyadharshiniM2432](https://github.com/PriyadharshiniM2432)")
+    st.write("LinkedIn: [linkedin.com/in/priyadharshini2432](https://www.linkedin.com/in/priyadharshini2432)")
+    st.write("Phone: +91 9790189573")
